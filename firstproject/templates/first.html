@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Training</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Hi! Welcome to the innovation with python training.</h1>
+    <div class="first">
+        {% for f in first%}
+        <div class="f">
+            <h2><a href="#">{{f.name}}</a></h2>
+            <p>{{f.contact}}</p>
+            <p>{{f.address}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
