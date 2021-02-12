@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<div class="main">
+    <form method="POST"></form>
+
+    {% for da in list %}
+
+    EmpName:{{ da.name }}<br/>
+    Domain:{{ da.domain }}<br/>
+    <br/>
+    <a href="{% url 'view3' da.id %}">Delete</a>
+    <hr/>
+    {% endfor %}
+
+
+</div>
+
+<a href="{% url 'view2' %}">Add New</a>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <title>Consultadd</title>
+</head>
+<body>
+<div class="a">
+    <ul >
+        <li id="cls">Hello,{{user.firstname}}</li>
+        <li><a href="create"> Create Blog</a></li>
+        <li><a href="aboutUs"> About Us</a></li>
+        <li><a href="logout"> Log out</a></li>
+
+    </ul>
+</div>
+<div>
+</div>
+{% if fields %}
+  <ul>
+    <
+    {% for i in fields %}
+      <li>name:{{i.name}}</li>
+      <li>name:{{i.name}}</li>
+      <li>name:{{i.name}}</li>
+      <li><a href="{% url 'view3' i.id %}">Delete</a></li>
+    {% endfor %}
+
+  </ul>
+{% else %}
+  As of now no blogs are there in models nothing
+{% endif %}
+
+</body>
+</html>
